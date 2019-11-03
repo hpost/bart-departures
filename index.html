@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -20,7 +20,7 @@
   </head>  
   <body>
     <header>
-      <select id="stations" aria-label="Station"><option>Departures</option></select>
+      <select id="stations" title="Departure Station"><option>Departures</option></select>
       <button id="direction" class="button__icon direction-s" title="Direction (North/South)"><i class="fas fa-compass"></i></button>
     </header>
     <main>
@@ -31,7 +31,10 @@
         Made by a public transit rider.
         <a href="https://github.com/hpost/bart-departures" target="_blank" rel="noopener" title="Source on GitHub"><i class="fab fa-github"></i></a>
       </p>
-      <button id="fullscreen" class="button__icon" title="Fullscreen"><i class="fas fa-expand"></i></button>
+      <div>
+        <button id="theme" class="button__icon" title="Switch Theme"><i class="fas fa-adjust"></i></button>
+        <button id="fullscreen" class="button__icon" title="Fullscreen"><i class="fas fa-expand"></i></button>
+      </div>
     </footer>
   </body>
 </html>
