@@ -1,0 +1,109 @@
+:root {
+  --ratio: 1.5;
+  --s-5: calc(var(--s-4) / var(--ratio));
+  --s-4: calc(var(--s-3) / var(--ratio));
+  --s-3: calc(var(--s-2) / var(--ratio));
+  --s-2: calc(var(--s-1) / var(--ratio));
+  --s-1: calc(var(--s0) / var(--ratio));
+  --s0: 1rem;
+  --s1: calc(var(--s0) * var(--ratio));
+  --s2: calc(var(--s1) * var(--ratio));
+  --s3: calc(var(--s2) * var(--ratio));
+  --s4: calc(var(--s3) * var(--ratio));
+  --s5: calc(var(--s4) * var(--ratio));
+  
+  font-size: 100%
+}
+
+@media only screen and (min-device-width: 480px) {
+  :root {
+    font-size: 150%
+  }
+}
+
+@media only screen and (min-device-width: 680px) {
+  :root {
+    font-size: 200%
+  }
+}
+
+body {
+  font-family: helvetica, arial, sans-serif;
+  line-height: var(--ratio);
+  padding: var(--s1);
+}
+
+header {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #aaa;
+  margin-bottom: var(--s1);
+}
+
+select {
+  max-width: 76vw;
+  padding: 0.25em 0.25em 0.25em 0;
+  padding-bottom: 0.25em;
+  border: 0;
+  border-bottom: 2px solid currentcolor; 
+  font-weight: bold;
+  color: #333;
+  border-radius: 0;
+}
+select:focus, select:active {
+  outline: 0;
+}
+
+.trains > * + * {
+  margin-top: var(--s2);
+}
+
+.departure {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #373fff;
+}
+.departure + .departure::before {
+  content: ', ';
+}
+
+.destination {
+  margin-left: 1.5em;
+  color: #333;
+}
+.destination__color {
+  position: absolute;
+  width: 1em;
+  height: 1em;
+  margin-top: 0.2em;
+  margin-left: -1.5em;
+  border-radius: 0.2em;
+  background-color: #aaa;
+}
+
+.direction {
+  transform: rotate(-100deg)
+}
+.direction-s {
+  transform: rotate(180deg)
+}
+
+.button__icon {
+  border: none;
+  background-color: transparent;
+  color: currentcolor;
+  cursor: pointer;
+  padding: 0.25em 0.5em;
+  margin-left: 0.25em;
+  transition: transform 300ms ease-in-out;
+}
+.button__icon:hover {
+  background-color: #eee;
+  color: #333;
+}
+
+.button__fullscreen {
+  position: absolute;
+  bottom: var(--s1);
+  right: var(--s1);
+}
