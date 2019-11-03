@@ -33,6 +33,7 @@ const stationList = document.querySelector('#stations')
 const directionToggle = document.querySelector('#direction')
 const departuresContainer = document.querySelector('#container')
 const fullscreenButton = document.querySelector('#fullscreen')
+const themeButton = document.querySelector('#theme')
 
 function dispatchRender (state) {
   document.dispatchEvent(new CustomEvent('render', { detail: state }))
@@ -96,6 +97,18 @@ function view () {
   
   fullscreenButton.addEventListener('click', () => {
     document.documentElement.requestFullscreen()
+  })
+  
+  themeButton.addEventListener('click', () => {
+    // add class that transitions everything
+    document.documentElement.classList.add('color-theme-in-transition')
+    // toggle between light and dark theme
+    const theme = document.documentElement.getAttribute('data-theme')
+    document.documentElement.setAttribute('data-theme', theme === 'dark' ? 'light' : 'dark')
+    // remove transition class afterwards
+    window.setTimeout(() => {
+      document.documentElement.classList.remove('color-theme-in-transition')
+    }, 1000)
   })
 }
 
