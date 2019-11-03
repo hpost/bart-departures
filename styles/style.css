@@ -81,9 +81,6 @@ select:focus, select:active {
   background-color: #aaa;
 }
 
-.direction {
-  transform: rotate(-100deg)
-}
 .direction-s {
   transform: rotate(180deg)
 }
