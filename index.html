@@ -10,23 +10,28 @@
     
     <link rel="stylesheet" href="/styles/reset.min.css">
     <link rel="stylesheet" href="/styles/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     
     <link rel="preload" href="/app/bart-api.js" as="script" crossorigin>
     <link rel="preload" href="/app/model.js" as="script" crossorigin>
     <link rel="preload" href="/app/view.js" as="script" crossorigin>
     <script type="module" src="/main.js" defer></script>
+    
+    <script src="https://kit.fontawesome.com/407ee50644.js" crossorigin="anonymous" defer></script>
   </head>  
   <body>
     <header>
       <select id="stations" aria-label="Station"><option>Departures</option></select>
-      <button id="direction" class="button__icon direction-s" aria-label="Direction (North/South)"><i class="fa fa-compass"></i></button>
+      <button id="direction" class="button__icon direction-s" title="Direction (North/South)"><i class="fas fa-compass"></i></button>
     </header>
     <main>
       <div id="container" class="trains"></div>
     </main>
     <footer>
-      <button id="fullscreen" class="button__fullscreen">Fullscreen</button>
+      <p>
+        Made by a public transit rider.
+        <a href="https://github.com/hpost/bart-departures" target="_blank" title="Source on GitHub"><i class="fab fa-github"></i></a>
+      </p>
+      <button id="fullscreen" class="button__icon" title="Fullscreen"><i class="fas fa-expand"></i></button>
     </footer>
   </body>
 </html>
