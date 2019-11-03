@@ -1,20 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Departures</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     
+    <title>Departures</title>
+    <meta name="description" content="Dashboard showing train departure times for Bay Area Rapid Transit. Not affiliated with BART.">
+    
     <link rel="stylesheet" href="/styles/reset.min.css">
     <link rel="stylesheet" href="/styles/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <link rel="preload" href="/app/bart-api.js" as="script" crossorigin>
+    <link rel="preload" href="/app/model.js" as="script" crossorigin>
+    <link rel="preload" href="/app/view.js" as="script" crossorigin>
     <script type="module" src="/main.js" defer></script>
   </head>  
   <body>
     <header>
-      <select id="stations"><option>Departures</option></select>
-      <button id="direction" class="button__icon direction-s"><i class="fa fa-compass"></i></button>
+      <select id="stations" aria-label="Station"><option>Departures</option></select>
+      <button id="direction" class="button__icon direction-s" aria-label="Direction (North/South)"><i class="fa fa-compass"></i></button>
     </header>
     <main>
       <div id="container" class="trains"></div>
