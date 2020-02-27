@@ -45,7 +45,7 @@
     display: grid;
     gap: var(--s1);
   }
-  @media all and (min-width: 1000px) {
+  @media all and (min-width: 1400px) {
     div {
       grid-template-columns: repeat(2, 1fr);
     }

@@ -8,9 +8,14 @@
 <div class="content">
 	<Header/>
 	<main>
-		<!-- TODO two columns, northbound and soutbound, below each other on small screens -->
-		<h4>{$direction === 's' ? 'Southbound' : 'Nortbound'}</h4>
-		<Trains station={$selectedStation} direction={$direction} />
+		<section>
+			<h4>Southbound</h4>
+			<Trains station={$selectedStation} direction="s" />
+		</section>
+		<section>
+			<h4>Northbound</h4>
+			<Trains station={$selectedStation} direction="n" />
+		</section>
 	</main>
 </div>
 <Footer/>
@@ -25,6 +30,16 @@
 	}
 	.content {
 		flex: 1 0 auto;
+	}
+
+	main {
+		display: grid;
+		gap: var(--s2);
+	}
+	@media all and (min-width: 1000px) {
+		main {
+			grid-template-columns: repeat(2, 1fr);
+		}
 	}
 
 	h4 {

@@ -1,18 +1,11 @@
 <script>
-	import { direction } from '../stores.js'
 	import Stations from './Stations.svelte'
 	import ThemeToggle from './ThemeToggle.svelte'
-	import IconButton from './IconButton.svelte'
-
-	function handleDirectionToggle() {
-		direction.update(dir => dir === 's' ? 'n' : 's')
-	}
 </script>
 
 <header>
 	<Stations/>
 	<div>
-		<IconButton icon="fa-compass" title="Direction (North/South)" on:click={handleDirectionToggle} toggled={$direction === 's'}/>
 		<ThemeToggle/>
 	</div>
 </header>
