@@ -43,15 +43,11 @@
 <style>
   div {
     display: grid;
-    gap: var(--s2);
+    gap: var(--s1);
   }
   @media all and (min-width: 1000px) {
     div {
       grid-template-columns: repeat(2, 1fr);
     }
   }
-  /* TODO figure this out again... */
-  /* div > * + * {
-    margin-top: var(--s1);
-  } */
 </style>
