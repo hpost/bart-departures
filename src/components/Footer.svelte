@@ -16,15 +16,13 @@
 
 <style>
   footer {
+		flex-shrink: 0;
     display: flex;
     justify-content: space-between;
     align-items: baseline;
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
+    margin-top: var(--s1);
     font-size: 0.8rem;
     color: var(--text-color-secondary);
-    padding: var(--s0) var(--s1);
+    padding-bottom: var(--s0);
   }
 </style>
