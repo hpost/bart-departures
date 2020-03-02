@@ -3,10 +3,17 @@
 	import { fetchStations } from '../services/bart.js'
   import { onMount } from 'svelte'
 
-  onMount(async () => $stations = await fetchStations())
+  const STATION_KEY = 'selectedStation'
 
-  let selection = 'PHIL'
-  $: selectedStation.set(selection)
+  onMount(async () => {
+    $stations = await fetchStations()
+  })
+
+  let selection = localStorage.getItem(STATION_KEY) || 'PHIL'
+  $: {
+    selectedStation.set(selection)
+    localStorage.setItem(STATION_KEY, selection)
+  }
 </script>
 
 <select title="Departure Station" bind:value={selection}>
