@@ -17,5 +17,6 @@ const fetchDepartures = async (origin, direction) =>
   fetch(etd(origin, direction))
     .then(response => response.json())
     .then(result => result.root.station[0].etd)
+    .catch(error => { throw new Error(error) })
 
 export { fetchStations, fetchDepartures }
