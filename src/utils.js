@@ -1,11 +1,11 @@
 import { onDestroy } from 'svelte'
 
-export function onInterval(callback, milliseconds) {
-	const interval = setInterval(callback, milliseconds)
+export function onInterval (callback, milliseconds) {
+  const interval = setInterval(callback, milliseconds)
 
-	onDestroy(() => {
-		clearInterval(interval)
+  onDestroy(() => {
+    clearInterval(interval)
   })
-  
+
   return interval
 }

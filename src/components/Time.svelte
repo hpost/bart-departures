@@ -8,7 +8,7 @@
 
 <style>
   span {
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-weight: bold;
     color: var(--text-color-accent);
   }

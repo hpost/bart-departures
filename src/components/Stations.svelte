@@ -1,6 +1,6 @@
 <script>
   import { stations, selectedStation } from '../stores.js'
-	import { fetchStations } from '../services/bart.js'
+  import { fetchStations } from '../services/bart.js'
   import { onMount } from 'svelte'
 
   const STATION_KEY = 'selectedStation'

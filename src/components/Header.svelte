@@ -1,26 +1,26 @@
 <script>
-	import Stations from './Stations.svelte'
-	import ThemeToggle from './ThemeToggle.svelte'
+  import Stations from './Stations.svelte'
+  import ThemeToggle from './ThemeToggle.svelte'
 </script>
 
 <header>
-	<Stations/>
-	<div>
-		<ThemeToggle/>
-	</div>
+  <Stations/>
+  <div>
+    <ThemeToggle/>
+  </div>
 </header>
 
 <style>
-	header {
-		display: flex;
-		flex-flow: row nowrap;
-		justify-content: space-between;
-		align-items: baseline;
-		margin-bottom: var(--s1);
-		color: #aaa;
-	}
-	div {
-		display: flex;
-		flex-flow: row nowrap;
-	}
+  header {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: var(--s0);
+    color: #aaa;
+  }
+  div {
+    display: flex;
+    flex-flow: row nowrap;
+  }
 </style>
