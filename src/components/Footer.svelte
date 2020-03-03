@@ -4,7 +4,7 @@
 
 <footer>
   <p>
-    Made by a public transit rider.
+    Made while riding public transit.
     <a href="https://github.com/hpost/bart-departures" target="_blank" rel="noopener" title="Source on GitHub">
       <i class="fab fa-github"></i>
     </a>
