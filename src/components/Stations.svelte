@@ -32,7 +32,6 @@
     border-bottom: 2px solid currentcolor;
     border-radius: 0;
     font-weight: bold;
-    font-size: 0.8rem;
     color: var(--text-color-primary);
     background-color: var(--background-color);
   }

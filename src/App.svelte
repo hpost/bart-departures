@@ -9,11 +9,11 @@
   <Header/>
   <main>
     <section>
-      <h5>Southbound</h5>
+      <h4>Southbound</h4>
       <Trains station={$selectedStation} direction="s" />
     </section>
     <section>
-      <h5>Northbound</h5>
+      <h4>Northbound</h4>
       <Trains station={$selectedStation} direction="n" />
     </section>
   </main>
@@ -38,7 +38,7 @@
     gap: var(--s1);
   }
 
-  h5 {
+  h4 {
     color: var(--text-color-secondary);
     border-bottom: 2px dashed var(--text-color-secondary);
     padding-bottom: var(--s-3);

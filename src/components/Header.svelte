@@ -16,6 +16,7 @@
     flex-flow: row nowrap;
     justify-content: space-between;
     align-items: baseline;
+    margin-bottom: var(--s0);
     color: #aaa;
   }
   div {
