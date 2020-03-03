@@ -1,5 +1,5 @@
 <script>
-  import { selectedStation, direction } from './stores.js'
+  import { selectedStation } from './stores.js'
   import Header from './components/Header.svelte'
   import Trains from './components/Trains.svelte'
   import Footer from './components/Footer.svelte'
