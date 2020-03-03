@@ -23,6 +23,5 @@
     margin-top: var(--s1);
     font-size: 0.8rem;
     color: var(--text-color-secondary);
-    padding-bottom: var(--s0);
   }
 </style>

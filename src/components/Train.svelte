@@ -14,23 +14,25 @@
       <Time minutes={estimate.minutes}/>
     {/each}
   </div>
-  <h2>
-    <span style="--train-color:{color}"></span>
+  <span>
+    <span class="train-color" style="--train-color:{color}"></span>
     {destination}
-  </h2>
+  </span>
 
 </div>
 
 <style>
-  h2 {
+  span {
+    font-size: 0.85rem;
+    font-weight: 600;
     margin-left: 1.5em;
     color: var(--text-color-primary);
   }
-  span {
+  .train-color {
     position: absolute;
     width: 1em;
     height: 1em;
-    margin-top: 0.2em;
+    margin-top: 0.4em;
     margin-left: -1.5em;
     border-radius: 0.25em;
     background-color: var(--train-color);
