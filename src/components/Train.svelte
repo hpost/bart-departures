@@ -5,7 +5,6 @@
 
   export let destination
   export let estimates
-  let color = estimates[0].hexcolor
 </script>
 
 <div class="train">
@@ -15,10 +14,9 @@
     {/each}
   </div>
   <span>
-    <span class="train-color" style="--train-color:{color}"></span>
+    <span class="train-color" data-color={estimates[0].hexcolor}></span>
     {destination}
   </span>
-
 </div>
 
 <style>
@@ -35,6 +33,6 @@
     margin-top: 0.25em;
     margin-left: -1.5em;
     border-radius: 0.25em;
-    background-color: var(--train-color);
+    background-color: attr(color data-color);
   }
 </style>
